@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.icatchtek.usbcam"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应CPU类型的so
+            abiFilters 'armeabi'//,'arm64-v8a'//,'armeabi-v7a', 'armeabi-v8a', 'arm64-v8a'
+        }
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    def version = "28.0.0"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$version"
+    implementation "com.android.support:design:$version"
+    implementation "com.android.support:support-v4:$version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/ICatchtekControl.jar')
+    implementation files('libs/ICatchtekReliant.jar')
+    implementation files('libs/ICatchtekVR.jar')
+    implementation project(':basecomponent')
+    implementation project(':baseutil')
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation project(':httpserver')
+    implementation project(':mediaplayer')
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation files('libs/photoView.jar')
+    implementation files('libs/stickyheadergridviewlib.jar')
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    implementation 'com.shuyu:gsyVideoPlayer-java:6.0.1'
+    //是否需要ExoPlayer模式
+    implementation 'com.shuyu:GSYVideoPlayer-exo2:6.0.1'
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:6.0.1'
+    implementation 'com.shuyu:gsyVideoPlayer-arm64:6.0.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    //内存泄漏分析
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+//    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+//    // Optional, if you use support library fragments:
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+//    implementation 'com.shuyu:GSYVideoPlayer:6.0.3'
+//    //是否需要ExoPlayer模式
+//    implementation 'com.shuyu:GSYVideoPlayer-exo2:6.0.3'
+}

@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name" translatable="false">USBCam_car</string>
+    <string name="wb_auto">AUTO</string>
+    <string name="wb_daylight">Daylight</string>
+    <string name="wb_cloudy">Cloudy</string>
+    <string name="wb_fluorescent">Fluorescent</string>
+    <string name="wb_incandescent">Incandescent</string>
+    <string name="burst_off">OFF</string>
+    <string name="burst_3">3 photos</string>
+    <string name="burst_5">5 photos</string>
+    <string name="burst_10">10 photos</string>
+    <string name="burst_hs">Continuous</string>
+    <string name="dateStamp_off">OFF</string>
+    <string name="dateStamp_date">Date</string>
+    <string name="dateStamp_date_and_time">Date and time</string>
+    <string name="text_high">High</string>
+    <string name="text_medium">Medium</string>
+    <string name="text_low">Low</string>
+    <string name="text_quality_hyperfine">Hyperfine</string>
+    <string name="text_quality_fine">Fine</string>
+    <string name="text_quality_standard">Standard</string>
+    <string name="frequency_50HZ">50HZ</string>
+    <string name="frequency_60HZ">60HZ</string>
+    <string name="dialog_card_removed">SD card is removed</string>
+    <string name="dialog_card_full">SD card is full</string>
+    <string name="dialog_card_lose">SD card is lost!</string>
+    <string name="dialog_card_inserted">SD card has been inserted!</string>
+    <string name="dialog_card_error">SD Card detection error, please re-plug!</string>
+    <string name="titile_urgent_record">Record</string>
+    <string name="titile_audio_control">Audio</string>
+    <string name="titile_take_photo">Capture</string>
+    <string name="titile_local_file">Local file</string>
+    <string name="titile_tf_file">TF file</string>
+    <string name="titile_setting">Setting</string>
+
+    <string name="text_device_not_connect">Camera not connected, please plug and retry!</string>
+    <string name="text_trigger_video">Trigger emergency video</string>
+    <string name="text_recording_video">Recording emergency video</string>
+    <string name="text_complete_trigger_video">Complete emergency video</string>
+    <string name="text_turn_on_recording_sound">Turn on the recording audio</string>
+    <string name="text_turn_off_the_recording_sound">Turn off the recording audio</string>
+    <string name="text_capture_completed">Capture completed</string>
+    <string name="text_capture_failed">Capture failed</string>
+    <string name="text_capture_busy">Capture busy,please try again.</string>
+    <string name="text_unlock">Unlock</string>
+    <string name="text_locked">Locked</string>
+    <string name="text_connecting_camera">connecting...</string>
+    <string name="text_device_disconnected">The camera has been disconnected, please plug it in and try again!</string>
+
+    <string name="setting_video_quality">Video quality</string>
+    <string name="setting_event_file_time">Event file time</string>
+    <string name="setting_crash_sensitivity">Crash sensitivity</string>
+
+    <string name="setting_event_file_time_10s">10s</string>
+    <string name="setting_event_file_time_20s">20s</string>
+    <string name="setting_event_file_time_30s">30s</string>
+
+    <string name="setting_preview_resolution">Preview quality</string>
+    <string name="setting_video_rec_size">Video size</string>
+    <string name="text_event_trigger">Event trigger</string>
+
+    <string name="setting_seamlesses_time_off">OFF</string>
+    <string name="setting_seamlesses_time_1min">1 min</string>
+    <string name="setting_seamlesses_time_3min">3 min</string>
+    <string name="setting_seamlesses_time_5min">5 min</string>
+    <string name="setting_reset">Reset</string>
+    <string name="setting_update_time">Update time</string>
+    <string name="title_awb">White Balance</string>
+    <string name="setting_video_size">Video size</string>
+    <string name="setting_seamless">Seamless</string>
+    <string name="setting_format">Format Camera</string>
+    <string name="setting_firmware_version">FW Version</string>
+    <string name="setting_check_firmware_update">Check FW update</string>
+    <string name="setting_app_version">App Version</string>
+    <string name="title_exit">Exit</string>
+
+    <string name="setting_yes">Yes</string>
+    <string name="setting_no">No</string>
+    <string name="setting_power_supply">Frequency</string>
+    <string name="setting_format_confirm">Format Camera</string>
+    <string name="setting_format_desc">Do you want to format SD, all your data will be lost?</string>
+    <string name="setting_formating">Formating...</string>
+    <string name="setting_formatted">Format completed</string>
+    <string name="text_operation_success">Opertaion succeed</string>
+    <string name="text_operation_failed">Opertaion failed!</string>
+    <string name="no_content">No content</string>
+    <string name="title_video">Video</string>
+    <string name="title_photo">Photo</string>
+    <string name="title_local_video">Local video</string>
+    <string name="title_local_photo">Local photo</string>
+    <string name="action_processing">Processing...</string>
+    <string name="dialog_deleting">Deleting...</string>
+    <string name="gallery_delete_des">Confirm deleting $1$ files?</string>
+    <string name="gallery_no_file_selected">No file selected</string>
+    <string name="menu_list">List</string>
+    <string name="text_sd_card_memory_shortage">sd card memory shortage!</string>
+    <string name="dialog_downloading_single">Downloading...</string>
+    <string name="message_download_failed">Download failed</string>
+    <string name="dialog_delete_failed_single">Error while deleting</string>
+    <string name="gallery_download_with_vid_msg">"Total Files: $1$ Download Time: $2$ mins and $3$ seconds Confirm download?"</string>
+    <string name="gallery_download">Download</string>
+    <string name="image_delete_des">Confirm delete this picture?</string>
+    <string name="message_download_to">Downloaded to $1$</string>
+    <string name="gallery_share_to">Share to...</string>
+    <string name="title_file_list">File list</string>
+    <string name="gallery_delete">Delete</string>
+    <string name="gallery_cancel">Cancel</string>
+
+    <string name="dialog_power_off">Power off!</string>
+    <string name="dialog_card_removed_not_format">SD card is removed, can not be formatted.</string>
+    <string name="dialog_start_pv_failed">Start pv failed</string>
+
+    <string name="text_sd_card_not_exist">SD card dons not exist.</string>
+    <string name="text_usb_permissions_denied">USB permissions have been denied.</string>
+    <string name="card_speed_too_low">Card speed is too low</string>
+
+    <string name="app_exception" translatable="false">APP  meets exception!</string>
+    <string name="download_file">Download file</string>
+    <string name="current_download_progress">Current download progress:</string>
+    <string name="start_streaming">Opening stream</string>
+    <string name="switching">Switching</string>
+    <string name="title_lock_file">Lock file</string>
+    <string name="sd_insert_error_info">Insert sd card error, please re-plug sd card.</string>
+    <string name="switch_playback_mode_failed">Switch playback mode failed.</string>
+    <string name="operation_is_busy">Operation is busy, please try again later.</string>
+    <string name="new_fw_to_update">检查到有新版FW,是否更新？</string>
+    <string name="operation_timeout">设置超时</string>
+    <string name="update_completion_prompt">固件已完成更新，需重新上电才能生效。</string>
+    <string name="permission_is_denied_info">The necessary permissions are denied, the application can not be used normally!</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.icatchtek.module.mediaplayer">
+
+    <application>
+        <activity
+            android:name=".LocalVideoPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme.NoActionBar" />
+    </application>
+
+</manifest>

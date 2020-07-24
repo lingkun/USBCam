@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_b7b8bd">#b7b8bd</color>
+    <color name="theme">#00BFD2</color>
+    <color name="test">#3F51B5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="orange">#FFA500</color>
+    <color name="lemonyellow">#FFFACD</color>
+    <color name="graywhite">#F5F5F5</color>
+    <color name="grayslate">#708090</color>
+    <color name="lightblue">#0083FF</color>
+
+    <color name="full_transparent">#00000000</color>
+    <color name="half_transparent">#aa000000</color>
+    <color name="one_third_transparent">#55000000</color>
+
+    <color name="bright_foreground_light">#ff000000</color>
+    <color name="bright_foreground_light_inverse">#ffffffff</color>
+    <color name="bright_foreground_light_disabled">#80000000</color>
+
+    <color name="dim_foreground_light">#808080</color>
+    <color name="dim_foreground_light_disabled">#80323232</color>
+    <color name="dim_foreground_light_inverse">#ff006eaa</color>
+    <color name="dim_foreground_light_inverse_disabled">#80bebebe</color>
+
+    <color name="head_text">#0e5986</color>
+    <color name="author_text">#0e5986</color>
+
+    <color name="face_bg">#eef1f4</color>
+
+    <color name="frame_button_text_nor">#033a5c</color>
+    <color name="frame_button_text_select">#FFFFFF</color>
+
+    <color name="listitem_transparent">#00000000</color>
+    <color name="listitem_black">#ff000000</color>
+    <color name="listitem_white">#ffffffff</color>
+    <color name="listitem_blue">#0e5986</color>
+    <color name="listitem_gray">#ff9da19e</color>
+    <color name="listitem_green">#ffe3ffc6</color>
+    <color name="listitem_greenyellow">#ff87b869</color>
+    <color name="listitem_yellow">#fffaffbf</color>
+    <color name="lightgray">#D3D3D3</color>
+    <color name="cambridge_blue">#32a3de</color>
+    <color name="pale_blue">#FF94DBFF</color>
+    <color name="greyish_white">#8b8b8b</color>
+    <color name="dark_grey">#ff353535</color>
+    <color name="half_transparent_grey">#aa202020</color>
+    <color name="pale_blue02">#FF8CB3C6</color>
+    <color name="lightgreeny">#FF4DCA75</color>
+    <color name="lightblack">#FF232323</color>
+    <color name="lightwhite">#FFE2E2E2</color>
+    <color name="dark_gray">#4d4d4d</color>
+    <color name="charcoal_gray">#151515</color>
+    <!--<color nameId="primary">#673AB7</color>-->
+    <!--<color nameId="primary_dark">#512DA8</color>-->
+    <!--<color nameId="primary_light">#D1C4E9</color>-->
+    <color name="accent">#FF4081</color>
+
+    <!--<color nameId="primary_text">#212121</color>-->
+    <!--<color nameId="secondary_text">#757575</color>-->
+
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="primary_idle">#FFFFFF</color>
+    <color name="primary_checked">#FFDCDCDC</color>
+    <color name="half_transparent_primary">#dd4d4d4d</color>
+     <color name="navigation">#FFFFFF</color>
+    <color name="item_header">#D3D3D3</color>
+
+    <color name="half_transparent_bar">#663d3d3d</color>
+    <color name="half_transparent_bar2">#30646464</color>
+    <color name="event_color_cambridge_blue">#59dbe0</color>
+    <color name="event_color_pink">#f57f68</color>
+    <color name="event_color_green">#87d288</color>
+    <color name="event_color_orange">#e99d2e</color>
+    <color name="event_color_red">#cc453b</color>
+    <color name="event_color_gold">#ffd700</color>
+    <color name="event_color_yellow">#fdfd22</color>
+    <color name="event_color_dark_green">#008000</color>
+    <color name="event_color_blue">#086ef4</color>
+    <color name="event_color_purple">#800080</color>
+
+    <color name="strip">#ededed</color>
+    <color name="transparent">#00000000</color>
+    <color name="shadow">#cc222222</color>
+
+    <color name="dd">#00ff00</color>
+    <color name="ds">#458EFD</color>
+
+    <color name="color_excellent">#2baf55</color>
+    <color name="color_good">#3e84a6</color>
+    <color name="color_average">#516874</color>
+    <color name="color_poor">#656c70</color>
+    <color name="color_anomaly">#cc453b</color>
+
+    <color name="color_call">#7f8c93</color>
+
+    <color name="guide_pages">#00BFD2</color>
+    <color name="guide_pages_dark">#00A1B1</color>
+    <color name="guide_pages_text">#999999</color>
+    <color name="guide_pages_no_enable">#999999</color>
+    <color name="guide_pages_hint">#dddddd</color>
+
+    <color name="ic_disabled">#B2B5BB</color>
+    <color name="ic_narmal">#70757E</color>
+    <color name="ic_pressed">#868B93</color>
+
+    <color name="ic_button_backgraund">#bbFEFEFE</color>
+    <color name="ic_line">#E1E2E4</color>
+    <color name="hint">#888888</color>
+
+
+    <color name="primary_light">#CFD8DC</color>
+    <color name="crey_white">#E0E0E0</color>
+
+    //晓军主题
+    <color name="primary">#076ee4</color>
+    <color name="primary_dark">#f2f2f2</color>
+    <color name="btn_pressed">#076ee4</color>
+    <color name="btn_disabled">#9b9b9b</color>
+    <color name="btn_narmal">#e8e8e8</color>
+
+    <color name="primary_text">#101010</color>
+    <color name="secondary_text">#47525e</color>
+    <color name="prompt_text">#FF0000</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="background">#f2f2f2</color>
+    <color name="background_gray">#e8e8e8</color>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="loading">加载中...</string>
+    <string name="title_ok">确定</string>
+    <string name="title_delete">删除</string>
+    <string name="title_cancel">取消</string>
+    <string name="title_warning">提示</string>
+    <string name="title_ignore">忽略</string>
+</resources>

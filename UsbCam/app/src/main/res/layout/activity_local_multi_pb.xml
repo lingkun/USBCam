@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary_dark"
+        >
+
+        <ImageButton
+            android:id="@+id/arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_transparent2gray"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/titile_local_file"
+            android:textColor="@color/primary_light_text"
+            android:textSize="@dimen/navigation_size"/>
+    </RelativeLayout>
+
+
+        <android.support.design.widget.TabLayout
+            android:layout_below="@+id/top_layout"
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionbar_border"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/blue_text"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/blue_text"
+            app:tabTextColor="@color/primary_light_text"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearanceInverse" />
+
+
+    <include layout="@layout/content_local_multi_pb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs"/>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/primary_transparent">
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_idle"
+        android:textSize="@dimen/first_title_size"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:layout_weight="1"
+        android:text="Title"
+        />
+    <com.icatchtek.basecomponent.widget.HorizSelectView
+        android:id="@+id/item_select_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:text="value"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+</LinearLayout>

@@ -1,0 +1,206 @@
+package com.icatch.usbcam.ui.usbpb.adapter;
+
+import android.app.Activity;
+import android.content.Context;
+import android.net.Uri;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.github.mjdev.libaums.fs.UsbFile;
+import com.icatch.usbcam.R;
+import com.icatch.usbcam.common.mode.OperationMode;
+import com.icatch.usbcam.common.type.FileType;
+import com.icatch.usbcam.data.SystemInfo;
+import com.icatch.usbcam.ui.usbpb.UsbFileHelper;
+import com.icatch.usbcam.ui.usbpb.UsbPbItemInfo;
+import com.icatch.usbcam.utils.GlideUtils;
+import com.tonicartos.widget.stickygridheaders.StickyGridHeadersSimpleAdapter;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * Created by b.jiang on 2017/5/19.
+ */
+
+
+public class USBMultiPbWallGridAdapter extends BaseAdapter implements StickyGridHeadersSimpleAdapter {
+    private String TAG = "LocalMultiPbWallGridAdapter";
+    private Activity context;
+    private List<UsbPbItemInfo> list;
+    private LayoutInflater mInflater;
+    private int width;
+    private OperationMode operationMode = OperationMode.MODE_BROWSE;
+    private FileType fileType;
+
+    public USBMultiPbWallGridAdapter(Activity context, List<UsbPbItemInfo> list, FileType fileType) {
+        this.context = context;
+        mInflater = LayoutInflater.from(context);
+        this.list = list;
+        this.fileType = fileType;
+        this.width = SystemInfo.getMetrics(context).widthPixels;
+    }
+
+    @Override
+    public int getCount() {
+        return list.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return list.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder mViewHolder;
+        if (convertView == null) {
+            mViewHolder = new ViewHolder();
+            convertView = mInflater.inflate(R.layout.item_local_photo_wall_grid, parent, false);
+            mViewHolder.mImageView = (ImageView) convertView.findViewById(R.id.local_photo_wall_grid_item);
+            mViewHolder.mCheckImageView = (ImageView) convertView.findViewById(R.id.local_photo_wall_grid_edit);
+            mViewHolder.mIsPanoramaSign = (ImageView) convertView.findViewById(R.id.is_panorama);
+            ViewGroup.LayoutParams photoLayoutParams = mViewHolder.mImageView.getLayoutParams();
+            photoLayoutParams.width = (width - 3 * 1) / 4;
+            photoLayoutParams.height = (width - 3 * 1) / 4;
+
+            mViewHolder.mImageView.setLayoutParams(photoLayoutParams);
+            convertView.setTag(mViewHolder);
+        } else {
+
+            mViewHolder = (ViewHolder) convertView.getTag();
+            ViewGroup.LayoutParams photoLayoutParams = mViewHolder.mImageView.getLayoutParams();
+            photoLayoutParams.width = (width - 3 * 1) / 4;
+            photoLayoutParams.height = (width - 3 * 1) / 4;
+            mViewHolder.mImageView.setLayoutParams(photoLayoutParams);
+        }
+//        if (list.get(position).isPanorama()) {
+//            mViewHolder.mIsPanoramaSign.setVisibility(View.VISIBLE);
+//        } else {
+//            mViewHolder.mIsPanoramaSign.setVisibility(View.GONE);
+//        }
+        if (operationMode == OperationMode.MODE_EDIT) {
+            mViewHolder.mCheckImageView.setVisibility(View.VISIBLE);
+//            mViewHolder.mImageView.showBorder(true);
+            if (list.get(position).isItemChecked) {
+                mViewHolder.mCheckImageView.setImageResource(R.drawable.ic_check_box_blue);
+            } else {
+                mViewHolder.mCheckImageView.setImageResource(R.drawable.ic_check_box_blank_grey);
+            }
+        } else {
+            mViewHolder.mCheckImageView.setVisibility(View.GONE);
+        }
+
+        UsbFile usbFile = list.get(position).getFile();
+//        if(usbFile != null){
+//            UsbFileInputStream fileInputStream = new UsbFileInputStream(usbFile);
+//            Glide.with(context).using(new PassthroughStreamLoader()).load(fileInputStream).override(100, 100).into(mViewHolder.mImageView);
+//        }
+        Uri uri = Uri.parse(UsbFileHelper.BASE_URL + usbFile.getParent().getName()+ "/"+ usbFile.getName());
+        if (fileType == FileType.FILE_PHOTO) {
+            GlideUtils.loadImageViewSize(context,uri,R.drawable.image_default,100,100,mViewHolder.mImageView);
+        }else {
+            mViewHolder.mImageView.setImageResource(R.drawable.video_default);
+        }
+        return convertView;
+    }
+
+    @Override
+    public long getHeaderId(int i) {
+        return list.get(i).section;
+    }
+
+    @Override
+    public View getHeaderView(int position, View convertView, ViewGroup parent) {
+        HeaderViewHolder mHeaderHolder;
+        if (convertView == null) {
+            mHeaderHolder = new HeaderViewHolder();
+            convertView = mInflater.inflate(R.layout.item_local_wall_grid_header, parent, false);
+            mHeaderHolder.mTextView = (TextView) convertView.findViewById(R.id.photo_wall_header);
+            convertView.setTag(mHeaderHolder);
+        } else {
+            mHeaderHolder = (HeaderViewHolder) convertView.getTag();
+        }
+        mHeaderHolder.mTextView.setText(list.get(position).getFileDate());
+        return convertView;
+    }
+
+
+    @Override
+    public void notifyDataSetChanged() {
+        width = SystemInfo.getMetrics(context).widthPixels;
+        super.notifyDataSetChanged();
+
+    }
+
+    public static class ViewHolder {
+        public ImageView mImageView;
+        public ImageView mCheckImageView;
+        public ImageView mIsPanoramaSign;
+    }
+
+    public static class HeaderViewHolder {
+        public TextView mTextView;
+    }
+
+    public void changeCheckBoxState(int position, OperationMode operationMode) {
+        this.operationMode = operationMode;
+        list.get(position).isItemChecked = list.get(position).isItemChecked == true ? false : true;
+        this.notifyDataSetChanged();
+    }
+
+    public List<UsbPbItemInfo> getCheckedItemsList() {
+        LinkedList<UsbPbItemInfo> checkedList = new LinkedList<UsbPbItemInfo>();
+
+        for (int ii = 0; ii < list.size(); ii++) {
+            if (list.get(ii).isItemChecked) {
+                checkedList.add(list.get(ii));
+            }
+        }
+        return checkedList;
+    }
+
+    public void quitEditMode() {
+        this.operationMode = OperationMode.MODE_BROWSE;
+        for (int ii = 0; ii < list.size(); ii++) {
+            list.get(ii).isItemChecked = false;
+        }
+        this.notifyDataSetChanged();
+    }
+
+    public void selectAllItems() {
+        for (int ii = 0; ii < list.size(); ii++) {
+            list.get(ii).isItemChecked = true;
+        }
+        this.notifyDataSetChanged();
+    }
+
+    public void cancelAllSelections() {
+        for (int ii = 0; ii < list.size(); ii++) {
+            list.get(ii).isItemChecked = false;
+        }
+        this.notifyDataSetChanged();
+    }
+
+    public int getSelectedCount() {
+        int checkedNum = 0;
+        for (int ii = 0; ii < list.size(); ii++) {
+            if (list.get(ii).isItemChecked) {
+                checkedNum++;
+            }
+        }
+        return checkedNum;
+    }
+}
+
+
+
